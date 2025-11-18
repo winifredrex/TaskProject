@@ -1,4 +1,57 @@
-.circle1{
-    background-color: purple;
-    height:100p
+:root{
+    --color1: #C5C9FD;
+    --color2: #BCD6FD;
+    --color3: #F6E8BD;
+    --color-base: #F8F9FA;
 }
+
+body {
+    background-color: var(--color-base);
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.circle1{
+    background-color: var(--color1);
+    height:100px;
+    width:100px;
+    position: absolute;
+    filter: blur(10px);
+    border-radius: 50%;
+    top: 250px;
+    left: 80px;
+}
+
+.circle2{
+    background-color: var(--color2);
+    height:100px;
+    width:100px;
+    position: absolute;
+    filter: blur(10px);
+    border-radius: 50%;
+    top: 500px;
+    left: 150px;
+}
+.circle3{
+   background-color: var(--color3);
+    height:100px;
+    width:100px;
+    position: absolute;
+    filter: blur(10px);
+    border-radius: 50%;
+    top: 50px;
+    right: 50px;
+}
+
+.firstcircle{
+    width: 120px;
+    height: 70px;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+
+
+

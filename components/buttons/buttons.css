@@ -1,0 +1,20 @@
+.help{
+   background-color: #e8eaf0;
+   padding: 15px 70px;
+   border-radius: 10px;
+   gap: 20px;
+   border: 1px solid #9CA3AF;
+} 
+.next-step{
+    background-color: #ECAC00;
+    padding: 15px 70px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
