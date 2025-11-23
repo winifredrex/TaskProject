@@ -11,6 +11,10 @@ body {
     padding: 0;
     overflow: hidden; 
 }
+@keyframes softGlow {
+  0%, 100% { opacity: 0.8; filter: blur(15px); }
+  50% { opacity: 0.10; filter: blur(25px); }
+}
 
 .circle1{
     background-color: var(--color1);
@@ -21,6 +25,7 @@ body {
     border-radius: 50%;
     top: 250px;
     left: 80px;
+    animation: softGlow 4s ease-in-out infinite;
 }
 
 .circle2{
@@ -32,6 +37,7 @@ body {
     border-radius: 50%;
     top: 500px;
     left: 150px;
+    animation: softGlow 5s ease-in-out infinite;
 }
 .circle3{
    background-color: var(--color3);
@@ -42,6 +48,7 @@ body {
     border-radius: 50%;
     top: 50px;
     right: 50px;
+    animation: softGlow 6s ease-in-out infinite;
 }
 
 .firstcircle{

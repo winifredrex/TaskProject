@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet"  href="login.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="login.css">
+    <!-- <link rel="stylesheet" href="signup.css"> -->
     <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Login / Signup</title>
 </head>
 <body>
 
-    <div class="login-container">
-        <div class="login-header">
-            <img src="logo.png" alt="Logo" class="logo">
-            <h1>Welcome Back!</h1>
-            <h2>Enter Your details to access your accounts</h2>
-        </div>
+<div class="login-container">
 
-        <div class="toggle-login">
-            <div class="button-bg">
-                <button class="login active " id="login-tab">Login</button>
-                <button onclick() class="signup" id="signup-tab" >Signup</button>
+    <!-- Header -->
+    <div class="login-header">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1 id="mainTitle">Welcome Back!</h1>
+        <h2 id="subtitle">Enter your details to access your accounts</h2>
+    </div>
+
+    <!-- Toggle buttons -->
+    <div class="toggle-login">
+        <div class="button-bg">
+            <button class="login active" id="tabLogin">Login</button>
+            <button class="signup " id="tabSignup">Signup</button>
+        </div>
+    </div>
+
+    <!-- Login content -->
+    <div id="loginContent">
+        <form>
+            <div class="input-group">
+                <readonly class="readonly" for="email">Email Address*</readonly>
+                <input type="text" id="loginEmail" name="email" placeholder="hello@example.com">
+                <span class="icon material-symbols-outlined">mail</span>
             </div>
+
+            <div class="input-group">
+                <readonly class="readonly" for="password">Password*</readonly>
+                <input type="password" id="loginPassword" name="password" placeholder="..........">
+                <span class="icon material-symbols-outlined">lock</span>
+            </div>
+
+            <div class="imported-button" data-import="components/buttons/buttons.html"></div>
+
+            <p>By continuing, you agree to our <span class="highlight">Terms of Service</span> & <span class="highlight">Privacy Policy</span></p>
+        </form>
+    </div>
+
+    <!-- Signup content -->
+<div id="signupContent" style="display:none;">
+    <form>
+        <div class="input-group">
+            <readonly class="readonly" for="name">Full Name*</readonly>
+            <input type="text" id="signupName" name="name" placeholder="John Doe">
+            <span class="icon material-symbols-outlined">person</span>
         </div>
-        <div>
-            <form>
-                <readonly class="readonly" for="email">Email Address*</readonly><br>
-                <input type="text" id="email" name="email" placeholder="hello@example.com"><br> 
-                <span id="icon1" class="material-symbols-outlined">mail</span>
 
-
-                <readonly class="readonly" for="password">Password*</readonly><br>
-                <input type="password" id="password" name="password" placeholder=".........."><br>
-                <span id="icon2" class="material-symbols-outlined">lock</span>
-
-                <div data-import="components/buttons/buttons.html"></div>
-
-                <p> By continuing, you agree to our Terms of Service & Privacy Policy</p>
-
-            </form>
-
+        <div class="input-group">
+            <readonly class="readonly" for="email">Email Address*</readonly>
+            <input type="text" id="signupEmail" name="email" placeholder="hello@example.com">
+            <span class="icon material-symbols-outlined">mail</span>
         </div>
 
-        <script src="assest/js/global.js"></script>
+        <div class="input-group">
+            <readonly class="readonly" for="password">Password*</readonly>
+            <input type="password" id="signupPassword" name="password" placeholder="..........">
+            <span class="icon material-symbols-outlined">lock</span>
+        </div>
+        <p class="password-p">Password must be at least 6 characters long</p>
+
+        <div class="imported-button" data-import="components/buttons/buttons.html"></div>
+
+          <p >By continuing, you agree to our <span class="highlight">Terms of Service</span> & <span class="highlight">Privacy Policy</span></p>
+    </form>
+</div>
+
+
+</div>
+
+<script>
+  const tabLogin = document.getElementById("tabLogin");
+  const tabSignup = document.getElementById("tabSignup");
+  const loginContent = document.getElementById("loginContent");
+  const signupContent = document.getElementById("signupContent");
+  const mainTitle = document.getElementById("mainTitle");
+  const subtitle = document.getElementById("subtitle");
+
+  function showLogin() {
+    tabLogin.classList.add("active");
+    tabSignup.classList.remove("active");
+    loginContent.style.display = "block";
+    signupContent.style.display = "none";
+    mainTitle.textContent = "Welcome Back!";
+    subtitle.textContent = "Enter Your details to access your accounts";
+  }
+
+  function showSignup() {
+    tabSignup.classList.add("active");
+    tabLogin.classList.remove("active");
+    signupContent.style.display = "block";
+    loginContent.style.display = "none";
+    mainTitle.textContent = "Join TaskMaster";
+    subtitle.textContent = "Create an account to boost your productivity";
+  }
+
+  tabLogin.addEventListener("click", showLogin);
+  tabSignup.addEventListener("click", showSignup);
+
+  // Start with Login visible
+  showLogin();
+</script>
+
+<script src="assest/js/global.js"></script>
+ <p class="footer-text">© 2024 TaskMaster | Made for University Students</p> 
 </body>
 </html>

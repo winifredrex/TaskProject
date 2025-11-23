@@ -3,10 +3,10 @@
    padding: 15px 70px;
    border-radius: 10px;
    gap: 20px;
-   border: 1px solid #9CA3AF;
+   border: 2px solid#E6E7EB;
 } 
 .next-step{
-    background-color: #ECAC00;
+    background-color: #fac125;
     padding: 15px 70px;
     border-radius: 10px;
     border: none;
@@ -16,5 +16,19 @@
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
+
+.help {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 70px; /* horizontal + vertical padding */
+    background-color: #F9FAFB;
+}
+
+.help .material-symbols-outlined {
+    font-size: 18px; /* smaller icon */
+}
+

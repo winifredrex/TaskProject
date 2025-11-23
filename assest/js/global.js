@@ -2,6 +2,12 @@
 // this returns an array like element that can be looped through
 const componentElements = document.querySelectorAll("[data-import]");
 
+
+
+
+
+
+
 // loop through this array list elements
 
 const renderComponent = (elements)=>{
