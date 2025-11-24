@@ -10,14 +10,11 @@ body {
     margin: 0;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
 .login-container{
     position: relative;
-    /* text-align: center; */
-    min-height: auto; /* remove fixed min-height */
-    padding-bottom: 10px; /* add spacing for footer */
+    min-height: auto; 
+    padding-bottom: 10px; 
     width: 450px;
-    /* height: 620px;; */
     background-color: var(--background-color);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -46,7 +43,6 @@ body {
 }
 .login-header{
     text-align: center;
-    /* margin-top: 20px; */
 }
 .toggle-login{
     display: flex; 
@@ -56,7 +52,6 @@ body {
     height: 38px;
     border-radius: 10px;
     margin: 20px auto;
-
 }
 .login.active {
     background-color: white;
@@ -79,11 +74,8 @@ body {
     cursor: pointer;
     margin-left: 74px;
     margin-right: 13px;
-    /* text-decoration: none; */
-    /* margin-left: 10px; */
 }
 .signup{
-    /* margin-left: 60px; */
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 14px;
     font-weight: 500;
@@ -113,7 +105,6 @@ body {
     display: block; 
     position: relative;
     padding: 10px 10px 10px 0; 
-    /* margin-left: 27px; */
 }
 
 .login-container input[type="text"],
@@ -126,10 +117,8 @@ body {
     box-sizing: border-box; 
     font-size: 16px;
     color: #374151;
-     padding-left: 45px;   /* <-- icon space */
-    /* margin-left: 27px; */
+     padding-left: 45px;   
 }
-
 .login-container input[type="text"]::placeholder{
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 14px;
@@ -137,20 +126,6 @@ body {
     color: #7a818d;
     padding-left: 20px;
 }
-/* #icon1{
-    font-size: 20px;
-    color: #99A1AF;
-    position: absolute;
-    top: 370px; 
-    right: 390px;
-}
-#icon2{
-    font-size: 20px;
-    color: #99A1AF;
-    position: absolute;
-    top: 458px; 
-    right: 390px;
-} */
 .login-container input[type="password"]::placeholder{
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 24px;
@@ -158,7 +133,6 @@ body {
     color: #7a818d;
     padding-left: 20px;
 }
-
 p{
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 12px;
@@ -166,18 +140,15 @@ p{
     line-height: 16px;
     text-align: center;
     margin-top: 20px;
-    /* margin-bottom: 20px; */
 }
 .imported-button{
     margin-top: 20px;
 }
-
 .input-group {
     position: relative;
     width: 395px;
     margin-left: 27px;
 }
-
 .input-group input {
     width: 100%;
     padding: 12px 45px 12px 15px; 
@@ -193,10 +164,9 @@ p{
     color: #99A1AF;
     font-size: 20px;
 }
-
 .footer-text {
-   position: relative; /* instead of absolute */
-    margin-top: 20px; /* space from content above */
+   position: relative; 
+    margin-top: 20px;
     left: 0;
     right: 0;
     text-align: center;
@@ -207,12 +177,12 @@ p{
     color: #6A7282;
 }
 .highlight {
-    color: #2563eb; /* blue */
-    cursor: pointer; /* optional, if you want it to look clickable */
+    color: #2563eb; 
+    cursor: pointer; 
 }
 .button-bg .login,
 .button-bg .signup {
-    font-weight: 500; /* thick/bold */
+    font-weight: 500; 
     font-size: 14px;
 }
 .password-p{

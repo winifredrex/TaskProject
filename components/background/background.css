@@ -15,7 +15,6 @@ body {
   0%, 100% { opacity: 0.8; filter: blur(15px); }
   50% { opacity: 0.10; filter: blur(25px); }
 }
-
 .circle1{
     background-color: var(--color1);
     height:100px;
@@ -27,7 +26,6 @@ body {
     left: 80px;
     animation: softGlow 4s ease-in-out infinite;
 }
-
 .circle2{
     background-color: var(--color2);
     height:100px;
@@ -50,7 +48,6 @@ body {
     right: 50px;
     animation: softGlow 6s ease-in-out infinite;
 }
-
 .firstcircle{
     width: 120px;
     height: 70px;

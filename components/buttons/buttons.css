@@ -12,23 +12,20 @@
     border: none;
 
 }
-
 .button-container {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-
 .help {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 15px 70px; /* horizontal + vertical padding */
+    padding: 15px 70px; 
     background-color: #F9FAFB;
 }
-
 .help .material-symbols-outlined {
-    font-size: 18px; /* smaller icon */
+    font-size: 18px;
 }
 

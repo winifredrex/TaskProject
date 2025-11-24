@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E6E7EB;
+    position: fixed;
+    transition: width 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    position: relative; 
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h2 {
+    font-size: 18px;
+    color: #000;
+}
+
+.divider1 {
+    border-top: 0.5px solid #E6E7EB;
+}
+
+.collapse-arrow {
+    width: 12px;       
+    height: 12px;       
+    max-width: 12px;    
+    max-height: 12px;  
+    object-fit: contain; 
+    margin-left: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.sidebar.collapsed .collapse-arrow {
+    transform: rotate(180deg);
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar.collapsed .logo h2,
+.sidebar.collapsed .nav-links li a span:nth-child(2),
+.sidebar.collapsed .profile,
+.sidebar.collapsed .logout a span:nth-child(2) {
+    display: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #000;
+    gap: 10px;
+}
+
+.logout {
+    margin-top: auto;
+    padding: 10px;
+}
+
+
