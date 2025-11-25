@@ -1,10 +1,111 @@
 <head>
     <title>dashboard</title>
     <link rel="stylesheet" href="/components/side-bar/sidebar.css">
+    <link rel="stylesheet" href="/modules/login/dashboard/dashboard.css"
 </head>
 <body>
 
     <div data-import="/components/side-bar/sidebar.html"></div>
+
+    <section class="dashboard-content">
+
+    <div class="header">
+        <h1>Good morning, winifred rex!</h1>
+        <p>Here's what's happening with your productivity today</p>
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <div class="stat-header">
+                <span class="material-symbols-outlined stat-icon blue">check_box</span>
+                <h3>Active Tasks</h3>
+            </div>
+            <div class="stat-value">0</div>
+            <p>0 completed</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-header">
+                <span class="material-symbols-outlined stat-icon teal">attach_money</span>
+                <h3>Total Expenses</h3>
+            </div>
+            <div class="stat-value">$0.00</div>
+            <p>This period</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-header">
+                <span class="material-symbols-outlined stat-icon green">description</span>
+                <h3>Total Notes</h3>
+            </div>
+            <div class="stat-value">0</div>
+            <p>Saved notes</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-header">
+                <span class="material-symbols-outlined stat-icon purple">trending_up</span>
+                <h3>Completion Rate</h3>
+            </div>
+            <div class="stat-value">0%</div>
+            <p>Task completion</p>
+        </div>
+
+    </div>
+
+    <div class="bottom-grid">
+
+
+        <div class="recent-tasks card">
+            <div class="card-header">
+                <span class="material-symbols-outlined">history</span>
+                <h3>Recent Tasks</h3>
+            </div>
+
+            <div class="empty-state">
+                <span class="material-symbols-outlined empty-icon">check_box</span>
+                <p>No tasks yet</p>
+            </div>
+        </div>
+
+  
+        <div class="quick-actions card">
+            <div class="card-header">
+                <span class="material-symbols-outlined">trending_up</span>
+                <h3>Quick Actions</h3>
+            </div>
+
+            <div class="action-card">
+                <span class="material-symbols-outlined blue">check_box</span>
+                <div>
+                    <h4>Create New Task</h4>
+                    <p>Add a task to your list</p>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <span class="material-symbols-outlined teal">attach_money</span>
+                <div>
+                    <h4>Track Expense</h4>
+                    <p>Record a new expense</p>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <span class="material-symbols-outlined green">description</span>
+                <div>
+                    <h4>Write Note</h4>
+                    <p>Capture your thoughts</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 <script src="/assest/js/global.js"></script>
 </body>

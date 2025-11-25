@@ -40,13 +40,13 @@ showLogin();
 
 }
 
-// Call the function once at the end of your script
+
 initToggleLogin();
 
 document.addEventListener("DOMContentLoaded", () => {
 const signupForm = document.getElementById("signupForm");
 signupForm.addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); 
 
     const name = document.getElementById("signupName").value;
     const email = document.getElementById("signupEmail").value;
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const loginEmail = document.getElementById("loginEmail").value;
         const loginPassword = document.getElementById("loginPassword").value;
 
-        // Retrieve user from localStorage
+
         const storedUser = JSON.parse(localStorage.getItem("signupUser"));
 
         if (!storedUser) {
@@ -82,10 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Check login credentials
+
         if (loginEmail === storedUser.email && loginPassword === storedUser.password) {
             alert(`Welcome back, ${storedUser.name}!`);
-            // Redirect or load dashboard here
+
         } else {
             alert("Incorrect email or password.");
         }
