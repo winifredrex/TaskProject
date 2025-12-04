@@ -1,6 +1,9 @@
+
 <head>
     <link rel="stylesheet" href="/components/side-bar/sidebar.css">
+    <link rel="stylesheet" href="community.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
@@ -26,7 +29,7 @@
         <div class="divider1"></div>
 
         <ul class="menu">
-            <li class="active">
+            <li>
                 <span class="material-symbols-outlined">grid_view</span>
                 <span class="menu-text">Dashboard</span>
             </li>
@@ -36,7 +39,7 @@
                 <span class="menu-text">Tasks</span>
             </li>
 
-            <li>
+            <li class="active">
                 <span class="material-symbols-outlined">groups</span>
                 <span class="menu-text">Community</span>
             </li>
@@ -65,6 +68,53 @@
         </div>
     </div>
 
+    <div class="main-content" id="mainContent">
+        <div class="community-container">
+            <div class="community-header">
+                <img src="https://ui-avatars.com/api/?name=Community+Board&background=5c62ec&color=fff&size=48" alt="Community Board Icon">
+                <div class="header-text">
+                    <h1>Community Board</h1>
+                    <p>Collaborate with your team</p>
+                </div>
+            </div>
+
+            <div class="post-input-area">
+                <div class="input-container">
+                    <div class="avatar-circle" id="userAvatarCircle">
+                    </div>
+                    
+                    <div class="input-content">
+                        <textarea 
+                            class="post-textarea"
+                            rows="3"
+                            placeholder="Share an update, ask for help, or celebrate a win..."
+                            id="postInput"
+                        ></textarea>
+                        
+                        <div class="post-button-wrapper">
+                            <button class="post-button" id="postButton">
+                                <span class="material-symbols-outlined post-icon">send</span>
+                                Post
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-feed" id="postFeed">
+            </div>
+
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon-wrapper">
+                    <span class="material-symbols-outlined empty-icon">chat_bubble</span>
+                </div>
+                <p class="empty-state-title">No posts yet.</p>
+                <p class="empty-state-subtitle">Be the first to share something!</p>
+            </div>
+        </div>
+    </div>
+
     <script src="/components/side-bar/sidebar.js"></script>
+    <script src="community.js"></script>
 </body>
 </html>

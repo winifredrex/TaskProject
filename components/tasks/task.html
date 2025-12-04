@@ -1,0 +1,130 @@
+<head>
+    <title>Task Management</title>
+    <link rel="stylesheet" href="/components/side-bar/sidebar.css">
+    <link rel="stylesheet" href="/components/tasks/task.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <div data-import="/components/side-bar/sidebar.html"></div>
+    
+    <div class="main-content" id="mainContent">
+        <section class="task-management-page">
+            <div class="task-content-wrapper">
+                <div class="page-header">
+                    <h1>Task Management</h1>
+                    <p>Manage and track your tasks</p>
+                </div>
+
+                <div class="task-controls">
+                    <div class="tabs">
+                        <button class="tab-button active" id="myTasksTab">
+                            <span class="material-symbols-outlined">check_circle</span>My Tasks
+                        </button>
+                        <button class="tab-button" id="aiSummaryTab">
+                            <span class="material-symbols-outlined">finance</span>AI Summary
+                        </button>
+                    </div>
+                    <button class="add-task-button" id="addTaskBtn">
+                        <span class="material-symbols-outlined">add</span>
+                        Add Task
+                    </button>
+                </div>
+
+                <div class="tasks-view active" id="tasksView">
+                    <div class="task-stats" id="taskStats">
+                        <div class="stat-item">
+                            <div class="stat-value dark-stat" id="activeTasks">0</div>
+                            <p>Active tasks</p>
+                        </div>
+                        <div class="vertical-separator"></div>
+                        <div class="stat-item completed-stat">
+                            <div class="stat-value green-stat" id="completedTasks">0</div>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="empty-tasks-state" id="emptyState">
+                        <div class="empty-icon-circle">
+                            <div class="empty-icon-inner-circle"></div>
+                        </div>
+                        <p class="empty-state-message">No tasks yet</p>
+                        <p class="empty-state-submessage">Click "Add Task" to create your first task</p>
+                    </div>
+
+                    <div class="tasks-list-container" id="tasksListContainer" style="display: none;">
+                        <div class="tasks-list" id="tasksList">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-summary-view" id="aiSummaryView">
+                    <div class="ai-summary-content">
+                        <div class="ai-summary-card">
+                            <h3>AI-Powered Task Summary</h3>
+                            <p class="ai-summary-description">Get insights and recommendations for your tasks</p>
+                            
+                            <div class="latest-summary-section">
+                                <h4>Latest Summary</h4>
+                                <div class="no-summary-state">
+                                    <p>No summary generated yet</p>
+                                    <p class="no-summary-hint">Click "Generate New" to get AI-powered insights</p>
+                                </div>
+                            </div>
+
+                            <button class="generate-new-button" id="generateSummaryBtn">
+                                Generate New
+                            </button>
+                        </div>
+
+                        <div class="history-section">
+                            <h4>History (0)</h4>
+                            <div class="history-empty-state">
+                                No previous summaries available
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="taskModal" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Title*</label>
+                    <input type="text" id="taskTitle" placeholder="Enter task title" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" placeholder="Enter task description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="taskPriority">Priority</label>
+                    <select id="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="taskDueDate">Due Date</label>
+                    <input type="date" id="taskDueDate">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn-submit">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/assest/js/global.js"></script>
+    <script src="/components/side-bar/sidebar.js"></script>
+    <script src="/components/tasks/task.js"></script>
+</body>
+</html>
